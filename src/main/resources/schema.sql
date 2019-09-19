@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `springit`;
+/*CREATE DATABASE  IF NOT EXISTS `springit`;
 USE `springit`;
 
 --
@@ -32,4 +32,4 @@ CREATE TABLE `link` (
   `title` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;*/
