@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface LinkRepository extends JpaRepository<Link, Long> {
 
+    Link findByTitle(String title);
 }
