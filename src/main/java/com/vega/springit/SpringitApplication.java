@@ -11,8 +11,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
+//@EnableJpaAuditing
 @SpringBootApplication
-@EnableJpaAuditing
 public class SpringitApplication {
 
 
