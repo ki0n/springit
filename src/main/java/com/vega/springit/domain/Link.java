@@ -16,7 +16,8 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 @ToString
 @NoArgsConstructor
 public class Link extends Auditable{
