@@ -9,6 +9,7 @@ import org.springframework.context.annotation.*;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.thymeleaf.extras.springsecurity5.dialect.SpringSecurityDialect;
 
 
 //@EnableJpaAuditing
@@ -39,4 +40,7 @@ public class SpringitApplication {
     PrettyTime prettyTime(){
         return new PrettyTime();
     }
+
+    @Bean
+    public SpringSecurityDialect securityDialect(){return new SpringSecurityDialect();}
 }
