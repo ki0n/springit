@@ -44,6 +44,9 @@ public class Link extends Auditable{
 
     private int voteCount = 0;
 
+    @ManyToOne
+    private User user;
+
     public Link(@NonNull String title, @NonNull String url) {
         this.title = title;
         this.url = url;
