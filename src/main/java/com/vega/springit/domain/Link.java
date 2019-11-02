@@ -68,6 +68,6 @@ public class Link extends Auditable{
     }
 
     private Date convertToDateViaInstant(LocalDateTime dateToConvert){
-        return java.util.Date.from(dateToConvert.atZone(ZoneId.systemDefault()).toInstant());
+        return Date.from(dateToConvert.atZone(ZoneId.systemDefault()).toInstant());
     }
 }

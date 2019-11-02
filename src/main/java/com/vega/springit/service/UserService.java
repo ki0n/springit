@@ -8,6 +8,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UserService {
@@ -34,13 +36,13 @@ public class UserService {
         //assign a role o the user
         user.addRole(roleService.findByName("ROLE_USER"));
         //set an activation code
-
+        user.setActivationCode(UUID.randomUUID().toString());
         //disable the user
-
+        user.setEnabled(false);
         //save user
         save(user);
         //send the activation email
-
+        sendActivationEmail(user);
         //return the user
         return user;
     }
@@ -64,5 +66,9 @@ public class UserService {
 
     public void sendWelcomeEmail(User user){
         mailService.sendWelcomeEmail(user);
+    }
+
+    public Optional<User> findByEmailAndActivationCode(String email, String activationCode){
+        return userRepository.findByEmailAndActivationCode(email, activationCode);
     }
 }
